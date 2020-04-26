@@ -11,3 +11,83 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.wheel-box{
+  position: relative;
+  margin-top: 20%;
+  margin-left: 40%;
+  background-color: lightgrey;
+  height: 100px;
+  width: 125px;
+}
+
+.inner-circle{
+  position: absolute;
+  margin-left: 12.5px;
+  border-radius: 50%;
+  background-color: white;
+  height: 100px;
+  width: 100px;
+}
+
+.centre-button{
+  position: absolute;
+  margin-top: 29%;
+  margin-left: 29%;
+  background-color: lightgrey;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+.menu {
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 37%;
+  color: lightgrey;
+}
+
+.forward {
+  position: absolute;
+  margin-top: 35%;
+  margin-left: 70%;
+  color: lightgrey;
+}
+
+.rewind {
+  position: absolute;
+  margin-top: 35%;
+  margin-left:5%;
+  color: lightgrey;
+}
+
+.play {
+  position: absolute;
+  margin-top: 109%;
+  margin-left: 25%;
+  color: lightgrey;
+}
+
+.display {
+  position: relative;
+  margin-left: 30%;
+  margin-top: 20%;
+  height: 12rem;
+  width: 20rem;
+  background-color: yellow;
+}
+
+.sidesection{
+  position: absolute;
+  padding-left: 1rem;
+}
+
+.listitem {
+  color: black;
+}
+
+.active {
+  background-color: rgb(76, 164, 199);
+  color: white;
+}
+
