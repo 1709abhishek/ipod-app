@@ -2,10 +2,10 @@ import React from 'react'
 import SideSection from './SideSection'
 import MainSection from './MainSection'
 
-function Display() {
+function Display(props) {
     return (
         <div className="display">
-            <SideSection />
+            <SideSection events={props.list} isAct={props.isAct} />
             <MainSection />
         </div>
     )

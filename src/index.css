@@ -14,16 +14,16 @@ code {
 
 .wheel-box{
   position: relative;
-  margin-top: 20%;
-  margin-left: 40%;
+  /* margin-top: 20%; */
+  margin-left: 30%;
   background-color: lightgrey;
   height: 100px;
-  width: 125px;
+  width: 20rem;
 }
 
 .inner-circle{
   position: absolute;
-  margin-left: 12.5px;
+  margin-left: 30%;
   border-radius: 50%;
   background-color: white;
   height: 100px;
@@ -32,8 +32,8 @@ code {
 
 .centre-button{
   position: absolute;
-  margin-top: 29%;
-  margin-left: 29%;
+  margin-top: 32%;
+  margin-left: -20%;
   background-color: lightgrey;
   border-radius: 50%;
   height: 40px;
@@ -63,8 +63,8 @@ code {
 
 .play {
   position: absolute;
-  margin-top: 109%;
-  margin-left: 25%;
+  margin-top: 74%;
+  margin-left: 38%;
   color: lightgrey;
 }
 
@@ -89,5 +89,12 @@ code {
 .active {
   background-color: rgb(76, 164, 199);
   color: white;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
 }
 
