@@ -8,6 +8,9 @@ import FastForwardIcon from '@material-ui/icons/FastForward';
 import FastRewindIcon from '@material-ui/icons/FastRewind';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import Display from './components/Display';
+import Games from './components/Games';
+import Settings from './components/Settings';
+import Music from './components/Music';
 
 
 let currentAngle = 0;
@@ -28,6 +31,10 @@ class App extends Component {
         { index: 3, name: "Setting", isActive: false }
       ],
       active: 0,
+      showMenu: true,
+      showGames: false,
+      showMusic: false,
+      showSettings: false
       // lastRoundAngle: 0,
       // myAngle: 0
     }
@@ -84,6 +91,42 @@ class App extends Component {
       active: this.state.active - 1
     })
   };
+
+  handleClick = () => {
+
+    this.setState({
+      showMenu: false,
+      showGames: false,
+      showMusic: false,
+      showSettings: false
+    })
+    // console.log(this.state.events[this.state.active].name)
+    if (this.state.events[this.state.active].name === "Games") {
+      this.setState({
+        showGames: true
+      })
+    }
+    if (this.state.events[this.state.active].name === "Music") {
+      this.setState({
+        showMusic: true
+      })
+    }
+    if (this.state.events[this.state.active].name === "Setting") {
+      this.setState({
+        showSettings: true
+      })
+    }
+  }
+
+  menuHandler = () => {
+    this.setState({
+      showMenu: false,
+      showGames: false,
+      showMusic: false,
+      showSettings: false,
+      showMenu: true
+    })
+  }
 
 
 
@@ -143,10 +186,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Display list={this.state.events} isAct={this.state.active} />
+        {this.state.showMenu && <Display list={this.state.events} isAct={this.state.active} />}
+        {this.state.showGames && <Games />}
+        {this.state.showMusic && <Music />}
+        {this.state.showSettings && <Settings />}
         <div className="wheel-box" ref={element => (this.region = element)}>
           <div className="inner-circle" ref={element => (this.element1 = element)}>
-            <div className="menu"><MenuIcon /></div>
+            <button className="menu" onClick={this.menuHandler}><MenuIcon /></button>
             <div className="forward"><FastForwardIcon /></div>
             <div className="rewind"><FastRewindIcon /></div>
             <button className="centre-button" onClick={this.handleClick} />

@@ -15,19 +15,24 @@ code {
 .wheel-box{
   position: relative;
   /* margin-top: 20%; */
-  margin-left: 30%;
+  margin-left: 20%;
   background-color: lightgrey;
-  height: 100px;
+  height: 120px;
   width: 20rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0 0 25px 25px;
 }
 
 .inner-circle{
   position: absolute;
-  margin-left: 30%;
+  margin-left: 35%;
+  margin-top: 2%;
   border-radius: 50%;
   background-color: white;
-  height: 100px;
-  width: 100px;
+  height: 105px;
+  width: 105px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 100%;
 }
 
 .centre-button{
@@ -37,14 +42,16 @@ code {
   background-color: lightgrey;
   border-radius: 50%;
   height: 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
   width: 40px;
 }
 
 .menu {
   position: absolute;
   margin-top: 5%;
-  margin-left: 37%;
+  margin-left: -20%;
   color: lightgrey;
+  border: none;
 }
 
 .forward {
@@ -70,25 +77,41 @@ code {
 
 .display {
   position: relative;
-  margin-left: 30%;
+  margin-left: 20%;
   margin-top: 20%;
-  height: 12rem;
+  height: 14rem;
   width: 20rem;
-  background-color: yellow;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 25px 25px 0 0;
 }
 
 .sidesection{
-  position: absolute;
-  padding-left: 1rem;
+  padding-left: 0rem;
+  height: 14rem;
+  width: 8rem;
+}
+
+.mainsection{
+  
+  background-image: url("https://img.icons8.com/bubbles/2x/menu.png");
+  height: 14rem;
+  width: 12rem;
 }
 
 .listitem {
   color: black;
+  margin-left: 2px;
 }
 
 .active {
   background-color: rgb(76, 164, 199);
   color: white;
+  height: 20px;
+  width: 120px;
+
 }
 
 .App{
@@ -96,5 +119,51 @@ code {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
+  background-color: rgb(250, 221, 221);
+  height: 500px;
+  width: 500px;
+  margin-left: 15%;
+  margin-top: 5%;
+  align-items: flex-start;
 }
 
+.settings{
+  height: 14rem;
+  width: 20rem;
+  position: relative;
+  margin-left: 20%;
+  margin-top: 20%;
+  vertical-align: middle;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 25px 25px 0 0;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRnv9MzacsMj6tcsQZioX48VPJz4uQZprfxktMF9kuVryBuxc0O&usqp=CAU");
+}
+
+.games{
+  height: 14rem;
+  width: 20rem;
+  position: relative;
+  margin-left: 20%;
+  margin-top: 20%;
+  vertical-align: middle;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 25px 25px 0 0;
+  background-image: url("https://image.shutterstock.com/image-vector/games-icon-260nw-378570319.jpg");
+}
+
+.music{
+  background-image: url("https://media.giphy.com/media/3o7525GciGyEel2cuc/giphy.gif");
+  height: 14rem;
+  width: 20rem;
+  position: relative;
+  margin-left: 20%;
+  margin-top: 20%;
+  vertical-align: middle;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 25px 25px 0 0;
+}
+
+.image {
+  height: 14rem;
+  width: 20rem;
+}
