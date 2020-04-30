@@ -11,6 +11,7 @@ import Display from './components/Display';
 import Games from './components/Games';
 import Settings from './components/Settings';
 import Music from './components/Music';
+import CoverFlow from './components/CoverFlow';
 
 
 let currentAngle = 0;
@@ -34,7 +35,8 @@ class App extends Component {
       showMenu: true,
       showGames: false,
       showMusic: false,
-      showSettings: false
+      showSettings: false,
+      showCoverflow: false
       // lastRoundAngle: 0,
       // myAngle: 0
     }
@@ -98,7 +100,8 @@ class App extends Component {
       showMenu: false,
       showGames: false,
       showMusic: false,
-      showSettings: false
+      showSettings: false,
+      showCoverflow: false
     })
     // console.log(this.state.events[this.state.active].name)
     if (this.state.events[this.state.active].name === "Games") {
@@ -116,6 +119,11 @@ class App extends Component {
         showSettings: true
       })
     }
+    if (this.state.events[this.state.active].name === "Coverflow") {
+      this.setState({
+        showCoverflow: true
+      })
+    }
   }
 
   menuHandler = () => {
@@ -124,6 +132,7 @@ class App extends Component {
       showGames: false,
       showMusic: false,
       showSettings: false,
+      showCoverflow: false,
       showMenu: true
     })
   }
@@ -187,6 +196,7 @@ class App extends Component {
     return (
       <div className="App">
         {this.state.showMenu && <Display list={this.state.events} isAct={this.state.active} />}
+        {this.state.showCoverflow && <CoverFlow />}
         {this.state.showGames && <Games />}
         {this.state.showMusic && <Music />}
         {this.state.showSettings && <Settings />}
